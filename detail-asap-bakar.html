@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Detail Telur Asin Kukus</title>
+</head>
+
+<body class="bg-gray-50">
+
+  <div class="max-w-5xl mx-auto py-12 px-6">
+    
+    <!-- Tombol Kembali -->
+    <!-- <a href="index.html#produk" 
+       class="text-green-700 hover:text-green-900 px-6 py-3 rounded-lg font-semibold inline-flex items-center">
+      ← Kembali ke Produk
+    </a> -->
+
+    <!-- Konten Detail -->
+    <div class="grid md:grid-cols-2 gap-10 bg-white p-8 rounded-2xl shadow-lg mt-6">
+      
+      <!-- Gambar Produk -->
+      <img 
+        src="Img/telur-asap-bakar_2.png" 
+        class="rounded-xl h-80 w-full object-cover shadow cursor-pointer hover:opacity-90 transition"
+        onclick="openImageModal(this.src)"
+      />
+
+      <div>
+        <h1 class="text-3xl font-bold mb-3">Asap dan Bakar </h1>
+
+        <p class="text-gray-600 leading-relaxed">
+          Telur asap dengan rasa asin gurih dan Masir, diproses dari telur bebek segar 
+          sehingga kualitas rasa tetap premium.
+        </p>
+        <br>
+
+         <p class="text-gray-700 leading-relaxed">
+        <span class="font-semibold">PRODUK DARI <br> RUMAH TELOR ASIN DO'A MAMAH KHAS BREBES</span><br>
+        ☑ Segar &nbsp; ☑ Pecah Tukar Baru &nbsp; ☑ Higienis
+      </p>
+
+      <p class="mt-4 text-gray-700">
+        <span class="font-semibold">Telur Asap</span><br>
+        Tersedia Kemasan Isi : <span class="font-semibold">10 Butir</span>
+      </p>
+        <p class="text-green-700 font-bold text-2xl mt-6">Rp 50.000 / box</p>
+
+        <a href="https://wa.me/6282124207936?text=Halo,%20saya%20ingin%20pesan%20Telur%20Asin%20Kukus"
+           class="mt-6 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg">
+          Pesan Sekarang
+        </a>
+      </div>
+    </div>
+
+   
+   
+  </div>
+
+  <!-- Modal Preview Gambar -->
+  <div id="imageModal" 
+       class="fixed inset-0 bg-black/70 hidden items-center justify-center p-4 z-50">
+    
+    <div class="relative max-w-4xl w-full">
+      <img id="modalImage" class="w-full rounded-xl shadow-xl">
+
+      <!-- Tombol Close -->
+      <button 
+        class="absolute top-3 right-3 bg-white text-black px-3 py-1 rounded-full text-sm shadow"
+        onclick="closeImageModal()">
+        ✕
+      </button>
+    </div>
+  </div>
+
+  <!-- Script Modal -->
+  <script>
+    function openImageModal(src) {
+      document.getElementById("modalImage").src = src;
+      document.getElementById("imageModal").classList.remove("hidden");
+      document.getElementById("imageModal").classList.add("flex");
+    }
+
+    function closeImageModal() {
+      document.getElementById("imageModal").classList.add("hidden");
+      document.getElementById("imageModal").classList.remove("flex");
+    }
+  </script>
+
+</body>
+</html>

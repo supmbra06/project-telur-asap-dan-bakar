@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telur Asin & Telur Asap Bakar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta property="og:title" content="Telur Asin termudah" />
+    <meta property="og:description" content="Rumah Telor doa mamah " />
+    <meta property="og:image" content="https://raw.githubusercontent.com/supmbra06/project-telur/main/telur-asin.jpg"/>
+    <meta property="og:url" content="https://telurasintermurah.netlify.app/" />
+    <meta property="og:type" content="website" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Hamburger Menu Animation */
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 6px;
+      }
+
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #047857;
+        border-radius: 2px;
+        transition: 0.3s;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+
+      /* Mobile Menu */
+      #mobileMenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+
+      #mobileMenu.active {
+        max-height: 300px;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- NAVBAR -->
+    <header class="fixed w-full bg-white shadow z-50">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-green-700">TelurAsinCurug</h1>
+        
+        <!-- Desktop Menu -->
+        <div class="space-x-6 hidden md:block">
+          <a href="#home" class="hover:text-green-700">Home</a>
+          <a href="#produk" class="hover:text-green-700">Produk</a>
+          <a href="#about" class="hover:text-green-700">About</a>
+          <a href="#kontak" class="hover:text-green-700">Kontak</a>
+        </div>
+
+        <!-- Hamburger Menu Icon (Mobile) -->
+        <div class="hamburger md:hidden" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden bg-green-600">
+        <a href="#home" class="block px-6 py-3 text-white hover:bg-green-700">Home</a>
+        <a href="#produk" class="block px-6 py-3 text-white hover:bg-green-700">Produk</a>
+        <a href="#about" class="block px-6 py-3 text-white hover:bg-green-700">About</a>
+        <a href="#kontak" class="block px-6 py-3 text-white hover:bg-green-700">Kontak</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="pt-32 pb-20 text-center bg-green-600 text-white">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Telur Asin <br />& <br /> Telur Asap Bakar</h2>
+      <p class="text-lg md:text-xl mb-6">Gurih, berkualitas, dan siap dikirim ke curug dan sekitarnya</p>
+      <a href="#produk" class="bg-white text-green-700 px-6 py-3 rounded-lg font-semibold">Lihat Produk</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 class="text-3xl font-bold mb-4">Tentang Kami</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Kami menyediakan telur asin dan telur asap bakar berkualitas premium. Menggunakan telur bebek segar dari peternakan terbaik,
+          diproses secara higienis, dan memiliki cita rasa yang khas. Kami melayani pemesanan untuk restoran, rumah makan, reseller,
+          atau pembelian pribadi.
+        </p>
+        <p class="mt-4 text-gray-600">Kualitas selalu menjadi prioritas kami.</p>
+      </div>
+
+      <div class="w-full h-80 rounded-2xl overflow-hidden shadow-xl shadow-gray-200">
+        <img
+          src="Img/telur_asin_3.png"
+          class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition"
+          alt="Telur Asin"
+          onclick="openImageModal(this.src)"
+        />
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section id="produk" class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-10">Produk Kami</h3>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Card Telur Asin Kukus -->
+          <a href="detail-kukus.html" class="block">
+            <div class="bg-gray-100 rounded-xl shadow hover:shadow-xl transition p-5">
+              <img src="Img/telur_asin_1.png" class="rounded-lg h-56 w-full object-cover mb-4" />
+              <h4 class="text-2xl font-bold">Telur Asin Kukus</h4>
+              <p class="text-gray-600 mt-2">Asin gurih dan Masir, rasa pas cocok untuk semua hidangan.</p>
+              <p class="text-green-700 font-semibold text-xl mt-3">Rp 45.000 / box</p>
+            </div>
+          </a>
+
+          <!-- Card Telur Asin Asap -->
+          <a href="detail-asap-bakar.html" class="block">
+            <div class="bg-gray-100 rounded-xl shadow hover:shadow-xl transition p-5">
+              <img src="Img/telur-asap-bakar.png" class="rounded-lg h-56 w-full object-cover mb-4" />
+              <h4 class="text-2xl font-bold">Telur Asap dan Bakar</h4>
+              <p class="text-gray-600 mt-2">Asin Gurih dan Masir, rasa pas cocok untuk semua hidangan.</p>
+              <p class="text-green-700 font-semibold text-xl mt-3">Rp 50.000 / box</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="py-20">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-6">Kontak & Pemesanan</h3>
+        <p class="text-gray-600 mb-6">
+          Siap kirim ke sekitar curug! Untuk informasi selanjutnya bisa hubungi melalui WhatsApp.
+        </p>
+
+        <a
+          href="https://wa.me/6282124207936?text=Halo,%20saya%20ingin%20pesan%20Telur%20Asin%20Kukus%20dan%20Telur%20Asap%20Bakar"
+          class="bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow hover:bg-green-700 inline-block">
+          Pesan Sekarang via WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+      <p>© 2025 TelurAsinKu — Semua Hak Dilindungi</p>
+    </footer>
+
+    <!-- MODAL PREVIEW GAMBAR -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-black/70 hidden items-center justify-center p-4 z-50"
+    >
+      <div class="relative max-w-4xl w-full">
+        <img id="modalImage" class="w-full rounded-xl shadow-xl" />
+
+        <button
+          class="absolute top-3 right-3 bg-white text-black px-3 py-1 rounded-full text-sm shadow"
+          onclick="closeImageModal()"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+
+    <!-- SCRIPT MODAL -->
+    <script>
+      function openImageModal(src) {
+        document.getElementById("modalImage").src = src;
+        document.getElementById("imageModal").classList.remove("hidden");
+        document.getElementById("imageModal").classList.add("flex");
+      }
+
+      function closeImageModal() {
+        document.getElementById("imageModal").classList.add("hidden");
+        document.getElementById("imageModal").classList.remove("flex");
+      }
+    </script>
+
+    <!-- HAMBURGER MENU SCRIPT -->
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      });
+
+      // Tutup menu saat klik link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>
